@@ -25,8 +25,10 @@ Arvore * insere(Arvore * a, int valor) {
         a->esq = NULL;
     } else {
         if (valor < a->info) {
+            
             a->esq = insere(a->esq, valor);
         } else {
+            
             a->dir = insere(a->dir, valor);
         }
     }
@@ -74,6 +76,9 @@ Arvore * excluir(Arvore * a, int valor) {
 }
 
 void preOrdem(Arvore* a) {
+    if(a==NULL){
+        printf("<>");
+    }
     if (a != NULL) {
         printf("<%i", a->info);
         preOrdem(a->esq);
@@ -84,6 +89,9 @@ void preOrdem(Arvore* a) {
 }
 
 void inOrdem(Arvore* a) {
+    if(a==NULL){
+        printf("<>");
+    }
     if (a != NULL) {
 
         inOrdem(a->esq);
@@ -94,6 +102,9 @@ void inOrdem(Arvore* a) {
 }
 
 void posOrdem(Arvore* a) {
+    if(a==NULL){
+        printf("<>");
+    }
     if (a != NULL) {
 
         posOrdem(a->esq);
